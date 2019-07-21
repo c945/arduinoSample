@@ -407,7 +407,7 @@ void start_pmode() {
   // which for many arduino's is not the SS pin.
   // So we have to configure RESET as output here,
   // (reset_target() first sets the correct level)
-  reset_target(true);
+  reset_target(false);
   pinMode(RESET, OUTPUT);
   SPI.begin();
   SPI.beginTransaction(SPISettings(SPI_CLOCK, MSBFIRST, SPI_MODE0));
